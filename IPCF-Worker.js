@@ -4,7 +4,12 @@ import { connect } from 'cloudflare:sockets';
 //https://www.uuidgenerator.net/
 let userID = 'f1a234f6-c946-4024-ba79-882f58c22727';
 
-const ProxyIPs = ['gozar.azad.sh-cf.shop'];
+const ProxyIPs = [
+	'cdn.xn--b6gac.eu.org',
+	'cdn-all.xn--b6gac.eu.org',
+	'workers.cloudflare.cyou',
+	'gozar.azad.sh-cf.shop'
+];
 // const ProxyIPs = ['bpb.yousef.isegaro.com'];
 var IP_Proxy = ProxyIPs[Math.floor(Math.random() * ProxyIPs.length)];
 
@@ -721,13 +726,13 @@ function getValueConfig(userIDs, hostName) {
 	const ValesSec2083 = atob(pt) + '://' + userID + atob(at) + IP_Proxy + HttpsUrlPart2083;
 	
 	
-	const HttpUrlPart80 = `:80?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const HttpUrlPart8080 = `:8080?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const HttpUrlPart8880 = `:8880?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const HttpUrlPart2052 = `:2052?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const HttpUrlPart2086 = `:2086?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const HttpUrlPart2095 = `:2095?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
-	const HttpUrlPart2082 = `:2082?encryption=none&security=tls&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart80 = `:80?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart8080 = `:8080?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart8880 = `:8880?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart2052 = `:2052?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart2086 = `:2086?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart2095 = `:2095?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
+	const HttpUrlPart2082 = `:2082?encryption=none&security=none&sni=${hostName}&fp=randomized&type=ws&host=${hostName}&path=%2F%3Fed%3D2048#${hostName}`;
 	
 	const ValesMain80 = atob(pt) + '://' + userID + atob(at) + hostName + HttpUrlPart80;
 	const ValesMain8080 = atob(pt) + '://' + userID + atob(at) + hostName + HttpUrlPart8080;
@@ -770,7 +775,7 @@ function getValueConfig(userIDs, hostName) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IPCF Panel v 0.0.1</title> 
+    <title>IPCF Panel v 0.0.2</title> 
 	<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
 
 	<style>
@@ -1187,7 +1192,7 @@ hr {
 	  <div class="header">
   
 		<h1>IPCF Panel</h1>
-		<p class="version"> Version : 0.0.1</p>
+		<p class="version"> Version : 0.0.2</p>
   
 	  </div>
 	</div>
